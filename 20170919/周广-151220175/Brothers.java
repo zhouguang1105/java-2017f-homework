@@ -3,16 +3,11 @@ import java.util.Random;
 public class Brothers {
      Huluwa[] brothers;
      Brothers(){
+         //初始化葫芦兄弟
          brothers = new Huluwa[7];
-         brothers[0] = new Huluwa(1,"大娃","红色");
-         brothers[1] = new Huluwa(2,"二娃","橙色");
-         brothers[2] = new Huluwa(3,"三娃","黄色");
-         brothers[3] = new Huluwa(4,"四娃","绿色");
-         brothers[4] = new Huluwa(5,"五娃","青色");
-         brothers[5] = new Huluwa(6,"六娃","蓝色");
-         brothers[6] = new Huluwa(7,"七娃","紫色");
+         for(int i=0; i<7; i++)
+             brothers[i] = new Huluwa(i+1);
      }
-
      void random_queue(){
         Random random = new Random();
         for(int i = 0; i < 20; i ++){
@@ -73,13 +68,13 @@ public class Brothers {
 
     void print_name(){
         for(int i = 0; i < 7; i ++)
-            brothers[i].get_name();
+            System.out.print(brothers[i].get_name() + " ");
         System.out.println();
     }
 
     void print_color(){
         for(int i = 0; i < 7; i ++)
-            brothers[i].get_color();
+            System.out.print(brothers[i].get_color() + " ");
         System.out.println();
     }
 
